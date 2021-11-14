@@ -50,5 +50,5 @@ module.exports = function patchLanguages(languages) {
       languagesPatched.push(language);
     }
   });
-  return languagesPatched;
+  return languagesPatched.sort((lang1, lang2) => lang2.percent - lang1.percent);
 };
