@@ -427,5 +427,7 @@
     "Zig": "#ec915c",
     "ZIL": "#dc75e5",
     "Zimpl": null,
-    "JSON": "#292929"
+    "JSON": "#292929",
+    "XML": "#0C62AA",
+    "TOML": "#9D4222"
 }
