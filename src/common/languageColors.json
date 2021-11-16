@@ -429,5 +429,8 @@
     "Zimpl": null,
     "JSON": "#292929",
     "XML": "#0C62AA",
-    "TOML": "#9D4222"
+    "TOML": "#9D4222",
+    "SQL": "#E38D00",
+    "Git Config": "#F54D27",
+    "Ignore List": "#000000"
 }
