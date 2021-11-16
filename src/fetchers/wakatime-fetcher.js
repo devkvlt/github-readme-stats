@@ -1,5 +1,6 @@
 const axios = require("axios");
-const patchLanguages = require("../patch-languages");
+// const patchLanguages = require("../patch-languages");
+// Patching languages is not necessary as that can be done upfront on Wakatime
 
 const fetchWakatimeStats = async ({ username, api_domain, range }) => {
   try {
@@ -8,7 +9,7 @@ const fetchWakatimeStats = async ({ username, api_domain, range }) => {
         api_domain ? api_domain.replace(/\/$/gi, "") : "wakatime.com"
       }/api/v1/users/${username}/stats/${range || ""}?is_including_today=true`,
     );
-    data.data.languages = patchLanguages(data.data.languages);
+    // data.data.languages = patchLanguages(data.data.languages);
     return data.data;
   } catch (err) {
     if (err.response.status < 200 || err.response.status > 299) {
