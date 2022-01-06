@@ -103,7 +103,7 @@ const recalculatePercentages = (languages) => {
 
 const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
   let { languages } = stats;
-  languages = languages.slice(0, 17);
+  // languages = languages.slice(0, 17);
   const {
     hide_title = false,
     hide_border = false,
