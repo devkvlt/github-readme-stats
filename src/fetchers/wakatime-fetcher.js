@@ -10,8 +10,8 @@ const fetchWakatimeStats = async ({ username, api_domain, range }) => {
       }/api/v1/users/${username}/stats/${range || ""}?is_including_today=true`,
     );
     // data.data.languages = patchLanguages(data.data.languages);
-    // return data.data;
-    return data.data.languages.slice(0, 12);
+    data.data.languages = data.data.languages.slice(0, 12);
+    return data.data;
   } catch (err) {
     if (err.response.status < 200 || err.response.status > 299) {
       throw new Error(
