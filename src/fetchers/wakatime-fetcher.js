@@ -11,6 +11,10 @@ const fetchWakatimeStats = async ({ username, api_domain, range }) => {
     );
     // data.data.languages = patchLanguages(data.data.languages);
     data.data.languages = data.data.languages.slice(0, 12);
+    let total = data.data.languages.reduce((x, y) => x.percent + y.percent);
+    data.data.languages.forEach(
+      (lang) => (lang.percent = (lang.percent * 100) / total),
+    );
     return data.data;
   } catch (err) {
     if (err.response.status < 200 || err.response.status > 299) {
